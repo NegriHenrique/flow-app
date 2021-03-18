@@ -5,10 +5,14 @@
     margin: 0;
     padding: 0;
 }
-body, input, textarea {
+body, input, textarea,a, h1, p {
     font-family: 'Raleway', sans-serif;
 }
 
 body {
     font-size: 16px;
+}
+
+a{
+    text-decoration: none;
 }
