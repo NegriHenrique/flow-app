@@ -24,7 +24,7 @@ const DescriptionPage: React.FC = () => {
             <IonContent fullscreen>
 
 
-                <IonHeader>
+                <IonHeader className="ion-no-border">
 
                     <IonRow className="ion-justify-content-center ion-align-items-center" style={{ gap: 2, }}>
                         <Logo />
@@ -34,14 +34,10 @@ const DescriptionPage: React.FC = () => {
 
                 <IonGrid>
                     <IonRow className="ion-justify-content-center ion-align-items-center ion-margin-horizontal">
-                        <IonCol size="2">
-                            {/* <Link to="/">
-                                <FiArrowLeft color="#fff" size="50px" />
-                            </Link> */}
-                        </IonCol>
+
                         <IonCol size="12">
 
-                            <IonImg src={streamer}></IonImg>
+                            <IonImg className="img-interview" src={streamer}></IonImg>
 
                         </IonCol>
                     </IonRow>
@@ -60,7 +56,7 @@ const DescriptionPage: React.FC = () => {
 
                             <Link to="/">
 
-                                <IonButton color="secondary">
+                                <IonButton onClick={() => RedirectPage('https://www.youtube.com/watch?v=08nTRrrQY14&t=7s&ab_channel=FlowPodcast')} color="secondary">
                                     <IonRow className="button-description">
 
 
@@ -102,7 +98,7 @@ const DescriptionPage: React.FC = () => {
 
                     <IonRow>
                         <IonCol className="ion-text-center ion-margin-vertical ">
-                            <IonButton>
+                            <IonButton className="shareButton">
                                 <FiShare2 size="50px" color="#fff" />
                             </IonButton>
 

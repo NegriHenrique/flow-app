@@ -35,7 +35,7 @@ const Home: React.FC = () => {
                                 <IonImg src={Logo}></IonImg>
                             </IonThumbnail>
                             <IonLabel className="ion-padding texto">
-                                <h2>Yoda <span className="tag">#290</span></h2>
+                                <h2>Yoda <span className="tag">#297</span></h2>
                                 <p>Felipe Piller Noronha, mais conhecido por seu apelido online YoDa, é um streamer, ex-jogador....</p>
                                 <p className="aovivo">ao vivo</p>
                             </IonLabel>

@@ -8,11 +8,22 @@
 body, input, textarea,a, h1, p {
     font-family: 'Raleway', sans-serif;
 }
+ 
+ionpage{
+    background-color: var(--background) !important;
+}
 
 body {
     font-size: 16px;
+  
 }
 
 a{
     text-decoration: none;
+}
+
+:is(ion-content,ion-page,ion-header, ion-tab-bar ){
+    --ion-text-color: white;
+    --ion-background-color:#111D12;
+
 }
