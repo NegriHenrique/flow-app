@@ -1,0 +1,27 @@
+.card {
+    border-radius: 10px;
+}
+
+.card .texto{
+    color: var(--ion-text-color);
+}
+
+.card .texto >h2 {
+    font-weight: bold;
+}
+
+.card .texto > p.aovivo {
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.card .texto .tag {
+    color: var(--ion-color-warning);
+    font-weight: bold;
+}
+
+.card.aovivo .texto .tag {
+    color: var(--ion-color-primary);
+}

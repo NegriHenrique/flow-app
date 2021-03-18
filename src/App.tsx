@@ -15,7 +15,8 @@ import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
 import Home from './pages/Home/Home';
-import DescriptionPage from './pages/DescriptionPage/DescriptionPage'
+import DescriptionPage from './pages/DescriptionPage/DescriptionPage';
+import { FiHeart, FiMic, FiSearch } from 'react-icons/fi';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -41,7 +42,7 @@ import './theme/global.css';
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
-      <IonTabs>
+      <IonTabs >
         <IonRouterOutlet>
           <Route exact path="/tab1">
             <Tab1 />
@@ -55,23 +56,16 @@ const App: React.FC = () => (
           <Route exact path="/">
             <Home />
           </Route>
-
-          <Route path="/">
-            <DescriptionPage />
-          </Route>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
+        <IonTabBar slot="bottom" style={{border: 'none'}}>
           <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+            <FiHeart size="25" color="#fff"/>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+          <IonTabButton tab="tab2" href="/" className="ion-margin-bottom">
+            <FiMic size="40" color="#bd8f2b" />
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+            <FiSearch size="25" color="#fff"/>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
