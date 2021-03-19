@@ -1,0 +1,41 @@
+.img-interview{
+    height: 150px;
+}
+
+.description-text{
+    max-width: 80%;
+    margin: 0 auto;
+   
+}
+
+.description-text h1{
+    font-weight: 700;
+}
+.description-text p{
+    font-weight: 300;
+}
+
+
+.button-description{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+  
+}
+
+.button-description ion-label{ 
+   color: #fff;
+   font-weight: 700;
+}
+
+.button-description svg{
+    font-size: 1.5rem;
+    
+}
+
+.shareButton svg{
+
+    width: 100%;
+    height: 100%;
+}

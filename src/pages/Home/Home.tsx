@@ -1,5 +1,6 @@
-import { IonContent, IonHeader, IonImg, IonPage, IonTitle, IonToolbar, IonThumbnail, IonRow, IonList, IonItem, IonLabel, IonButton } from '@ionic/react';
+import { IonContent, IonHeader, IonImg, IonPage, IonTitle, IonToolbar, IonThumbnail, IonRow, IonList, IonItem, IonLabel, IonButton, IonChip } from '@ionic/react';
 import React from 'react';
+import { Link } from 'react-router-dom'
 import './Home.css';
 import Logo from '../../assets/Logo-cortada.png';
 import { FiInfo, FiSettings, FiPlay } from 'react-icons/fi';
@@ -10,8 +11,8 @@ const Home: React.FC = () => {
             <IonHeader className="ion-no-border">
                 <IonToolbar>
                     <IonRow className="ion-justify-content-around ion-align-items-start ion-padding-top">
-                        <FiInfo size="35" color="#fff"/>
-                        <IonImg src={Logo} className="ion-margin-vertical" style={{width: '50%'}}></IonImg>
+                        <FiInfo size="35" color="#fff" />
+                        <IonImg src={Logo} className="ion-margin-vertical" style={{ width: '50%' }}></IonImg>
                         <FiSettings size="35" color="#fff" />
                     </IonRow>
                 </IonToolbar>
@@ -23,18 +24,27 @@ const Home: React.FC = () => {
             </IonHeader>
             <IonContent fullscreen>
                 <IonList>
-                    <IonItem className="card aovivo ion-margin" color="tertiary">
-                        <IonThumbnail slot="start" >
-                            <IonImg src={Logo}></IonImg>
-                        </IonThumbnail>
-                        <IonLabel className="ion-padding texto">
-                            <h2>Choice <span className="tag">#290</span></h2>
-                            <p>Uma das maiores revelações do Rap Nacional, João Marcelo "Choice'' é um artista independente de 21 anos. Nascido no morro do ...</p>
-                            <p className="aovivo">ao vivo</p>
-                        </IonLabel>
-                        <FiPlay size="30" color="#fff"/>
-                    </IonItem>
-                    
+
+                    <Link to="/DescriptionPage">
+                        <IonItem className="card aovivo ion-margin" color="tertiary">
+
+
+
+
+                            <IonThumbnail slot="start" >
+                                <IonImg src={Logo}></IonImg>
+                            </IonThumbnail>
+                            <IonLabel className="ion-padding texto">
+                                <h2>Yoda <span className="tag">#297</span></h2>
+                                <p>Felipe Piller Noronha, mais conhecido por seu apelido online YoDa, é um streamer, ex-jogador....</p>
+                                <p className="aovivo">ao vivo</p>
+                            </IonLabel>
+                            <FiPlay size="30" color="#fff" />
+
+
+                        </IonItem>
+                    </Link>
+
                     <IonItem className="card ion-margin" color="dark">
                         <IonThumbnail slot="start" >
                             <IonImg src={Logo}></IonImg>
@@ -90,7 +100,7 @@ const Home: React.FC = () => {
                 </IonList>
             </IonContent>
         </IonPage>
-  );
+    );
 }
 
 export default Home;

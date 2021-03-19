@@ -50,27 +50,31 @@ const App: React.FC = () => (
           <Route exact path="/tab2">
             <Tab2 />
           </Route>
-          <Route path="/tab3">
+          <Route exact path="/tab3">
             <Tab3 />
           </Route>
           <Route exact path="/">
             <Home />
           </Route>
+          <Route exact path="/DescriptionPage">
+            <DescriptionPage />
+
+          </Route>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom" style={{border: 'none'}}>
+        <IonTabBar slot="bottom" style={{ border: 'none' }}>
           <IonTabButton tab="tab1" href="/tab1">
-            <FiHeart size="25" color="#fff"/>
+            <FiHeart size="25" color="#fff" />
           </IonTabButton>
           <IonTabButton tab="tab2" href="/" className="ion-margin-bottom">
             <FiMic size="40" color="#bd8f2b" />
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
-            <FiSearch size="25" color="#fff"/>
+            <FiSearch size="25" color="#fff" />
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>
-  </IonApp>
+  </IonApp >
 );
 
 export default App;
