@@ -27,3 +27,19 @@ a{
     --ion-background-color:#111D12;
 
 }
+/* 
+.menu-principal {
+    --box-shadow: none;
+} */
+
+.menu-principal svg {
+    color: var(--ion-color-secondary);
+}
+
+.menu-principal.ativo{
+    --background: var(--ion-color-secondary);
+}
+
+.menu-principal.ativo svg {
+    color: var(--ion-color-primary)
+}

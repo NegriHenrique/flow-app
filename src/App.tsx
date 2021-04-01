@@ -1,16 +1,15 @@
 
-import { Redirect, Route } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import {
   IonApp,
-  IonIcon,
-  IonLabel,
+  IonFab,
+  IonFabButton,
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
   IonTabs,
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
@@ -36,7 +35,6 @@ import '@ionic/react/css/display.css';
 
 /* Theme Global */
 import './theme/global.css';
-
 
 
 const App: React.FC = () => (
@@ -65,14 +63,19 @@ const App: React.FC = () => (
           <IonTabButton tab="tab1" href="/tab1">
             <FiHeart size="25" color="#fff" />
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/" className="ion-margin-bottom">
-            <FiMic size="40" color="#bd8f2b" />
-          </IonTabButton>
+          <IonTabButton></IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
             <FiSearch size="25" color="#fff" />
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
+      <IonFab vertical="bottom" horizontal="center" slot="fixed" className="botao-fab" style={{ transform: 'translateX(-50%)', boxShadow: 'none', bottom: '1rem'}}>
+        <IonFabButton className={`menu-principal`} style={{height: '4rem', width: '4rem'}}>
+          <Link to="/">
+            <FiMic size="35" />
+          </Link>
+        </IonFabButton>
+      </IonFab>
     </IonReactRouter>
   </IonApp >
 );
